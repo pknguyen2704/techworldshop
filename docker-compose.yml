@@ -12,7 +12,7 @@ services:
         expose:
             - "80"
         ports:
-            - "80:80"
+            - "1908:80"
         links:
             - app
     app:
@@ -36,7 +36,7 @@ services:
     mysql:
         restart: always
         image: mysql:8.0.31
-        container_name: magento_mysql
+        container_name: techworld_mysql
         command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
         working_dir: /var/lib/mysql
         volumes:
